@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-style: $font-style;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    color: unset;
+}
+
+.input-biz {
+    width: 100%;
+}
+
+// colors
+.grey-text {
+    color: $grey-text;
+}
+
+.green-text {
+    color: $green-text;
+}
+
+// size
+.small-size {
+    font-size:  $small-size;
+}
+
+.normal-size {
+    font-size: $normal-size;
+}
+
+.bold-text {
+    font-weight: $bold-text;
+}
+
+
+// 
+[role="button"] {
+    cursor: pointer;
+}
