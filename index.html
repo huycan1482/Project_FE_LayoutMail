@@ -43,7 +43,7 @@
                             <img class="search-left-icon" src="imgs/search-icon.svg" alt="" role="button">
                         </div>
                     </div>
-                    <ul class="list-dropdown-item">
+                    <ul class="list-dropdown-item custom-scrollbar">
                         <li class="dropdown-items">
                             <a href="#" class="dropdown-link">
                                 <div>
@@ -119,9 +119,72 @@
                             <img src="imgs/QuestionCircle.svg" alt="">
                         </div>
                     </li>
-                    <li class="options" role="button">
+                    <li class="options" role="button" data-bs-toggle="dropdown" role="button">
                         <div class="wrap-svg">
                             <img src="imgs/Avatar.svg" alt="">
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-options shadow">
+                            <div class="head-dropdown-menu">
+                                <img src="imgs/Avatar.svg" alt="">
+                                <div class="">
+                                    <span class="normal-size normal-text">Công Nguyễn</span>
+                                    <br>
+                                    <a href="#" class="small-size normal-text ">Thành viên Bạc ></a>
+                                </div>
+                            </div>
+                            <ul class="list-options">
+                                <li class="options">
+                                    <a href="#" class="option-link">
+                                        <img src="imgs/menu-user.svg" alt="" width="14px" height="14px">
+                                        <span class="normal-size normal-text">Thông tin cá nhân</span>
+                                    </a>
+                                </li>
+                                <li class="options">
+                                    <a href="#" class="option-link">
+                                        <img src="imgs/menu-wallet.svg" alt="" width="14px" height="14px">
+                                        <span class="normal-size normal-text">Ví</span>
+                                    </a>
+                                </li>
+                                <li class="options">
+                                    <a href="#" class="option-link">
+                                        <img src="imgs/menu-package.svg" alt="" width="14px" height="14px">
+                                        <span class="normal-size normal-text">Giải pháp của tôi</span>
+                                    </a>
+                                </li>
+                                <li class="options">
+                                    <a href="#" class="option-link">
+                                        <img src="imgs/menu-order.svg" alt="" width="14px" height="14px">
+                                        <span class="normal-size normal-text">Lịch sử mua hàng</span>
+                                    </a>
+                                </li>
+                                <li class="options">
+                                    <a href="#" class="option-link">
+                                        <img src="imgs/menu-2fa.svg" alt="" width="14px" height="14px">
+                                        <span class="normal-size normal-text">Bảo mật hai lớp</span>
+                                    </a>
+                                </li>
+                                <li class="options">
+                                    <a href="#" class="option-link">
+                                        <img src="imgs/menu-voucher-store.svg" alt="" width="14px" height="14px">
+                                        <span class="normal-size normal-text">Kho voucher</span>
+                                    </a>
+                                </li>
+                                <li class="options">
+                                    <a href="#" class="option-link">
+                                        <img src="imgs/menu-user-password.svg" alt="" width="14px" height="14px">
+                                        <span class="normal-size normal-text">Đổi mật khẩu</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="bottom-dropdown-menu">
+                                <a href="#" class="option-link">
+                                    <img src="imgs/menu-logout.svg" alt="" width="14px" height="14px">
+                                    <span class="normal-size red-text">Thông tin cá nhân</span>
+                                </a>
+                            </div>
+                            <div class="dropdown-arrow-position">
+                                <img src="imgs/dropdown-arrow-position.svg" style="" alt="">
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -130,7 +193,82 @@
     </div> 
     <div class="content">
         <div class="sidebar">
+            <div class="sidebar-left">
+                <div class="sidebar-box">
+                    <div class="sidebar-box-title">
+                        <span class="">CHUNG</span>
+                    </div>
+                    <ul class="sidebar-box-options">
+                        <li class="options">
+                            <a href="#" class="sidebar-link">
+                                <div class="wrap-svg sidebar-logo">
+                                    <img src="imgs/menu-home.svg" alt="">
+                                </div>
+                                <span class="sidebar-label">My Bizfly</span>
+                            </a>
+                        </li>
+                        <li class="options" role="button" data-bs-toggle="dropdown" role="button">
 
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-box">
+                    <div class="sidebar-box-title" style="margin-top: 8px">
+                        <span class="">DỰ ÁN</span>
+                    </div>
+                    <ul class="sidebar-box-options">
+                        <li class="options">
+                            <a href="#" class="sidebar-link">
+                                <div class="wrap-svg sidebar-logo">
+                                    <img src="imgs/menu-overview.svg" alt="">
+                                </div>
+                                <span class="sidebar-label">Tổng quan dự án</span>
+                            </a>
+                        </li>
+                        <li class="options">
+                            <a href="#" class="sidebar-link">
+                                <div class="wrap-svg sidebar-logo">
+                                    <img src="imgs/menu-config.svg" alt="">
+                                </div>
+                                <span class="sidebar-label">Cấu hình</span>
+                            </a>
+                        </li>
+                        <li class="options">
+                            <div class="sidebar-collapse" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                                <div class="wrap-svg">
+                                    <img src="imgs/menu-package.svg" alt="">
+                                </div>
+                                <div class="sidebar-collapse-content">
+                                    <span class="sidebar-name wrap-text">Giải pháp của dự án áhádasadsd</span>
+                                    <span class="sidebar-quantity">(3)</span>
+                                </div>
+                                <div class="wrap-svg">
+                                    <img src="imgs/arrow-up.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="option-child-list" class="collapse" id="collapseExample1">
+                                <ul>
+                                    <li class="options">
+                                        <a href="#" class="sidebar-link">
+                                            <div class="wrap-svg sidebar-logo">
+                                                <img src="imgs/menu-config.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <span>Bizfly CRM</span>
+                                                <br>
+                                                <span>Đang sử dụng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-right">
+
+            </div>
         </div>
     </div>
 

@@ -24,13 +24,27 @@ a:hover {
     width: 100%;
 }
 
+// 
+
+.shadow {
+    box-shadow: 0px 2px 0.25rem rgb(0 0 0 / 20%) !important;
+}
+
 // colors
+.normal-text {
+    color: $normal-text;
+}
+
 .grey-text {
     color: $grey-text;
 }
 
 .green-text {
     color: $green-text;
+}
+
+.red-text {
+    color: $red-text;
 }
 
 // size
