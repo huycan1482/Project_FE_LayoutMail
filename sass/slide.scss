@@ -24,15 +24,23 @@
                 } 
             }
 
+            .sidebar-collapse { 
+                &-content {
+                    margin-left: 0;
+                }
+                margin-bottom: 8px;
+            }
+
             .options .option-child-list .sidebar-link {
                 padding: 12px 15px;
+                height: 40px;
                 .sidebar-logo img {
                     width: 20px;
                 }
 
                 .sidebar-text {
-                    max-height: 0;
-                    transition: max-height 0.5s ease-out;
+                    max-height: 30px;
+                    transition: 0.5s ease-out;
                     overflow-y: hidden;
                 }
             }
