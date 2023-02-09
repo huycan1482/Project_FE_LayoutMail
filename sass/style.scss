@@ -1,5 +1,6 @@
 @import "variable.scss";
 @import "main.scss";
+@import "slide.scss";
 
 @mixin align-container ($display: flex, $align: center, $justify: space-between) {
     display: $display;
@@ -90,7 +91,8 @@
 
     &-logo {
         @include align-container(flex, center, start);
-        width: 207px;
+        width: 230px;
+        height: 100%;
         .header-toggle {
             margin-right: 16px;
         }
@@ -244,7 +246,10 @@
 
 .sidebar {
     display: flex;
+    height: 100%;
+    overflow-x: hidden;
     &-left, &-right {
+        transition: .5s all;
         padding-top: 16px;
     }
 
@@ -263,21 +268,77 @@
         &-options {
             .options {
                 margin-bottom: 8px;
+                .wrap-svg svg path {
+                    transition: .3s all;
+                }
 
-                .option-child-list .options {
-                    padding-left: 48px;
+                .option-child-list {
+                    .sidebar-link {
+                        padding-left: 48px;
+                    }
+
+                    .sidebar-text {
+                        max-width: 140px;
+                        max-height: 45px;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;
+                    }
+
+                    .sidebar-logo {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    .sidebar-name {
+                        font-size: $normal-size;
+                        color: $normal-text;
+                    }
+
+                    .sidebar-status {
+                        font-size: $small-size;
+                    }
                 }
             }
+
+            .option-hover:hover {
+                // color: $blue-text;
+                .sidebar-collapse-content .sidebar-name, .sidebar-collapse-content .sidebar-quantity {
+                    color: $blue-text;
+                }
+                .wrap-svg svg path {
+                    fill: $blue-text;
+                }
+
+                .sidebar-label {
+                    color: $blue-text;
+                }
+            }   
 
             .sidebar-logo {
                 width: 14px;
                 height: 14px;
+                margin-right: 12px;
             }
 
             .sidebar-label {
-                margin-left: 10px;
+                transition: all .3s;
                 font-size: $normal-size;
                 color: $normal-text;
+            }
+
+            .option-active {
+                background: $background-active;
+                border-right: 3px solid $blue-text;
+                .sidebar-collapse-content .sidebar-name, .sidebar-collapse-content .sidebar-quantity {
+                    color: $blue-text;
+                }
+                .wrap-svg svg path {
+                    fill: $blue-text;
+                }
+
+                .sidebar-label {
+                    color: $blue-text;
+                }
             }
         }
     }
@@ -297,6 +358,7 @@
             font-size: $normal-size;
             color: $normal-text;
             .sidebar-name {
+                transition: .3s all;
                 margin-right: 2px;
                 display: inline-block;
                 max-width: 140px;

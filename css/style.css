@@ -44,6 +44,10 @@ a:hover {
   color: #FF4D4F;
 }
 
+.yellow-text {
+  color: #FAAD14;
+}
+
 .small-size {
   font-size: 12px;
 }
@@ -58,6 +62,36 @@ a:hover {
 
 [role=button] {
   cursor: pointer;
+}
+
+.sidebar-left.active {
+  width: 48px;
+}
+.sidebar-left.active .sidebar-box-title {
+  display: none;
+}
+.sidebar-left.active .sidebar-box-options .sidebar-link, .sidebar-left.active .sidebar-box-options .sidebar-collapse {
+  padding: 9px 16px;
+}
+.sidebar-left.active .sidebar-box-options .sidebar-link .wrap-svg, .sidebar-left.active .sidebar-box-options .sidebar-collapse .wrap-svg {
+  width: 16px;
+  height: auto;
+  margin-right: 20px;
+}
+.sidebar-left.active .sidebar-box-options .sidebar-link .wrap-svg svg, .sidebar-left.active .sidebar-box-options .sidebar-collapse .wrap-svg svg {
+  width: 16px;
+  height: auto;
+}
+.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link {
+  padding: 12px 15px;
+}
+.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-logo img {
+  width: 20px;
+}
+.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow-y: hidden;
 }
 
 .wrap-svg {
@@ -138,7 +172,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 207px;
+  width: 230px;
+  height: 100%;
 }
 .header-logo .header-toggle {
   margin-right: 16px;
@@ -285,8 +320,11 @@ a:hover {
 
 .sidebar {
   display: flex;
+  height: 100%;
+  overflow-x: hidden;
 }
 .sidebar-left, .sidebar-right {
+  transition: 0.5s all;
   padding-top: 16px;
 }
 .sidebar-left {
@@ -304,17 +342,60 @@ a:hover {
 .sidebar-box-options .options {
   margin-bottom: 8px;
 }
-.sidebar-box-options .options .option-child-list .options {
+.sidebar-box-options .options .wrap-svg svg path {
+  transition: 0.3s all;
+}
+.sidebar-box-options .options .option-child-list .sidebar-link {
   padding-left: 48px;
+}
+.sidebar-box-options .options .option-child-list .sidebar-text {
+  max-width: 140px;
+  max-height: 45px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.sidebar-box-options .options .option-child-list .sidebar-logo {
+  width: 24px;
+  height: 24px;
+}
+.sidebar-box-options .options .option-child-list .sidebar-name {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+}
+.sidebar-box-options .options .option-child-list .sidebar-status {
+  font-size: 12px;
+}
+.sidebar-box-options .option-hover:hover .sidebar-collapse-content .sidebar-name, .sidebar-box-options .option-hover:hover .sidebar-collapse-content .sidebar-quantity {
+  color: #1890FF;
+}
+.sidebar-box-options .option-hover:hover .wrap-svg svg path {
+  fill: #1890FF;
+}
+.sidebar-box-options .option-hover:hover .sidebar-label {
+  color: #1890FF;
 }
 .sidebar-box-options .sidebar-logo {
   width: 14px;
   height: 14px;
+  margin-right: 12px;
 }
 .sidebar-box-options .sidebar-label {
-  margin-left: 10px;
+  transition: all 0.3s;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.85);
+}
+.sidebar-box-options .option-active {
+  background: #E6F7FF;
+  border-right: 3px solid #1890FF;
+}
+.sidebar-box-options .option-active .sidebar-collapse-content .sidebar-name, .sidebar-box-options .option-active .sidebar-collapse-content .sidebar-quantity {
+  color: #1890FF;
+}
+.sidebar-box-options .option-active .wrap-svg svg path {
+  fill: #1890FF;
+}
+.sidebar-box-options .option-active .sidebar-label {
+  color: #1890FF;
 }
 .sidebar-link {
   display: flex;
@@ -337,6 +418,7 @@ a:hover {
   color: rgba(0, 0, 0, 0.85);
 }
 .sidebar-collapse-content .sidebar-name {
+  transition: 0.3s all;
   margin-right: 2px;
   display: inline-block;
   max-width: 140px;

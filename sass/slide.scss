@@ -1,0 +1,44 @@
+.sidebar {
+    &-left.active {
+        width: 48px;
+    }
+
+    &-left.active {
+        .sidebar-box-title {
+            display: none;
+        }
+
+        .sidebar-box-options {
+            .sidebar-link, .sidebar-collapse {
+                padding: 9px 16px;
+
+                .wrap-svg {
+                    width: 16px;
+                    height: auto;
+                    margin-right: 20px;
+
+                    svg {
+                        width: 16px;
+                        height: auto;
+                    }
+                } 
+            }
+
+            .options .option-child-list .sidebar-link {
+                padding: 12px 15px;
+                .sidebar-logo img {
+                    width: 20px;
+                }
+
+                .sidebar-text {
+                    max-height: 0;
+                    transition: max-height 0.5s ease-out;
+                    overflow-y: hidden;
+                }
+            }
+
+        }
+
+    }
+
+}
