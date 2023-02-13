@@ -16,6 +16,7 @@
                     width: 16px;
                     height: auto;
                     margin-right: 25px;
+                    // transition: margin-right .5s;
 
                     svg {
                         width: 16px;
@@ -39,7 +40,7 @@
                 }
 
                 .sidebar-text {
-                    max-height: 50px;
+                    max-height: 15px;
                     transition: 0.5s ease-out;
                     overflow-y: hidden;
                 }

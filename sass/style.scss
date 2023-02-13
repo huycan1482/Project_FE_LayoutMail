@@ -8,8 +8,13 @@
     justify-content: $justify;
 }
 
+@mixin more-transition ($things) {
+    transition: $things .7s;
+}
+
 .wrap-svg {
-    @include align-container(flex, center, center)
+    @include align-container(flex, center, center);
+    @include more-transition (margin);
 }
 
 .search-input-left {
@@ -93,6 +98,7 @@
 
 .header {
     position: fixed;
+    z-index: 1;
     top: 0px;
     padding: 0 17px;
     height: 64px;
@@ -264,7 +270,7 @@
     height: 100%;
     // background-color: #fff;
     &-left, &-right {
-        transition: .5s all;
+        transition: .7s all;
         padding-top: 8px;
     }
 
@@ -381,6 +387,7 @@
                 width: 14px;
                 height: 14px;
                 margin-right: 12px;
+                @include more-transition (margin-right);
             }
 
             .sidebar-label {
@@ -409,6 +416,7 @@
 
     &-link {
         @include align-container(flex, center, start);
+        @include more-transition(all);
         padding: 9px 24px;
         line-height: 22px;
         height: 40px;

@@ -96,7 +96,7 @@ a:hover {
   width: 20px;
 }
 .sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text, .sidebar-right.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text {
-  max-height: 50px;
+  max-height: 15px;
   transition: 0.5s ease-out;
   overflow-y: hidden;
 }
@@ -114,6 +114,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: margin 0.7s;
 }
 
 .search-input-left {
@@ -180,6 +181,7 @@ a:hover {
 
 .header {
   position: fixed;
+  z-index: 1;
   top: 0px;
   padding: 0 17px;
   height: 64px;
@@ -348,7 +350,7 @@ a:hover {
   height: 100%;
 }
 .sidebar-left, .sidebar-right {
-  transition: 0.5s all;
+  transition: 0.7s all;
   padding-top: 8px;
 }
 .sidebar-left {
@@ -435,6 +437,7 @@ a:hover {
   width: 14px;
   height: 14px;
   margin-right: 12px;
+  transition: margin-right 0.7s;
 }
 .sidebar-box-options .sidebar-label {
   transition: all 0.3s;
@@ -458,6 +461,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: start;
+  transition: all 0.7s;
   padding: 9px 24px;
   line-height: 22px;
   height: 40px;
