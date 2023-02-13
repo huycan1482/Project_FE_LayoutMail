@@ -67,38 +67,47 @@ a:hover {
 .sidebar-left.active {
   width: 48px;
 }
-.sidebar-left.active .sidebar-box-title {
+.sidebar-left.active .sidebar-box-title, .sidebar-right.active .sidebar-box-title {
   display: none;
 }
-.sidebar-left.active .sidebar-box-options .sidebar-link, .sidebar-left.active .sidebar-box-options .sidebar-collapse {
+.sidebar-left.active .sidebar-box-options .sidebar-link, .sidebar-left.active .sidebar-box-options .sidebar-collapse, .sidebar-right.active .sidebar-box-options .sidebar-link, .sidebar-right.active .sidebar-box-options .sidebar-collapse {
   padding: 9px 16px;
 }
-.sidebar-left.active .sidebar-box-options .sidebar-link .wrap-svg, .sidebar-left.active .sidebar-box-options .sidebar-collapse .wrap-svg {
+.sidebar-left.active .sidebar-box-options .sidebar-link .wrap-svg, .sidebar-left.active .sidebar-box-options .sidebar-collapse .wrap-svg, .sidebar-right.active .sidebar-box-options .sidebar-link .wrap-svg, .sidebar-right.active .sidebar-box-options .sidebar-collapse .wrap-svg {
   width: 16px;
   height: auto;
-  margin-right: 20px;
+  margin-right: 25px;
 }
-.sidebar-left.active .sidebar-box-options .sidebar-link .wrap-svg svg, .sidebar-left.active .sidebar-box-options .sidebar-collapse .wrap-svg svg {
+.sidebar-left.active .sidebar-box-options .sidebar-link .wrap-svg svg, .sidebar-left.active .sidebar-box-options .sidebar-collapse .wrap-svg svg, .sidebar-right.active .sidebar-box-options .sidebar-link .wrap-svg svg, .sidebar-right.active .sidebar-box-options .sidebar-collapse .wrap-svg svg {
   width: 16px;
   height: auto;
 }
-.sidebar-left.active .sidebar-box-options .sidebar-collapse {
+.sidebar-left.active .sidebar-box-options .sidebar-collapse, .sidebar-right.active .sidebar-box-options .sidebar-collapse {
   margin-bottom: 8px;
 }
-.sidebar-left.active .sidebar-box-options .sidebar-collapse-content {
+.sidebar-left.active .sidebar-box-options .sidebar-collapse-content, .sidebar-right.active .sidebar-box-options .sidebar-collapse-content {
   margin-left: 0;
 }
-.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link {
+.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link, .sidebar-right.active .sidebar-box-options .options .option-child-list .sidebar-link {
   padding: 12px 15px;
   height: 40px;
 }
-.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-logo img {
+.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-logo img, .sidebar-right.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-logo img {
   width: 20px;
 }
-.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text {
-  max-height: 30px;
+.sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text, .sidebar-right.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text {
+  max-height: 50px;
   transition: 0.5s ease-out;
   overflow-y: hidden;
+}
+.sidebar-right.active {
+  width: 64px;
+}
+.sidebar-right.active .sidebar-box-options .sidebar-link, .sidebar-right.active .sidebar-box-options .sidebar-collapse {
+  padding: 12px 24px;
+}
+.sidebar-right.active .sidebar-box-options .sidebar-link .wrap-svg, .sidebar-right.active .sidebar-box-options .sidebar-collapse .wrap-svg {
+  transition: margin-right 0.3s;
 }
 
 .wrap-svg {
@@ -156,7 +165,6 @@ a:hover {
 .content {
   height: 100vh;
   width: 100%;
-  background-color: #FF4D4F;
 }
 
 .wrap-text {
@@ -166,7 +174,13 @@ a:hover {
   white-space: nowrap;
 }
 
+.rotate-img {
+  transform: rotate(180deg);
+}
+
 .header {
+  position: fixed;
+  top: 0px;
   padding: 0 17px;
   height: 64px;
   width: 100%;
@@ -197,7 +211,7 @@ a:hover {
   width: 100%;
 }
 .header-navbar .header-nav .nav-options {
-  width: 232px;
+  width: 210px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -327,9 +341,11 @@ a:hover {
 }
 
 .sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
   display: flex;
   height: 100%;
-  overflow-x: hidden;
 }
 .sidebar-left, .sidebar-right {
   transition: 0.5s all;
@@ -345,7 +361,16 @@ a:hover {
   position: relative;
 }
 .sidebar-right .slide-sidebar {
+  width: 14px;
   position: absolute;
+  top: 400px;
+  right: -14px;
+  background-color: #4D7FF8;
+  z-index: 100;
+}
+.sidebar-right .slide-sidebar img {
+  width: 14px;
+  height: 66px;
 }
 .sidebar-box {
   box-shadow: inset 0px -1px 0px #f0f0f0;
@@ -382,6 +407,20 @@ a:hover {
 }
 .sidebar-box-options .options .option-child-list .sidebar-status {
   font-size: 12px;
+}
+.sidebar-box-options .options .option-child-list .option-hover .sidebar-logo {
+  transition: opacity 0.3s;
+}
+.sidebar-box-options .options .option-child-list .option-hover .sidebar-text .sidebar-name {
+  transition: all 0.3s;
+}
+.sidebar-box-options .options .option-child-list .option-hover:hover .sidebar-logo {
+  transition: all 0.5s;
+  opacity: 0.5;
+}
+.sidebar-box-options .options .option-child-list .option-hover:hover .sidebar-text .sidebar-name {
+  color: #1890FF;
+  transition: all 0.5s;
 }
 .sidebar-box-options .option-hover:hover .sidebar-collapse-content .sidebar-name, .sidebar-box-options .option-hover:hover .sidebar-collapse-content .sidebar-quantity {
   color: #1890FF;
@@ -442,6 +481,12 @@ a:hover {
   margin-right: 2px;
   display: inline-block;
   max-width: 140px;
+}
+.sidebar-collapse [data-change=rotate] {
+  transition: all 0.5s;
+}
+.sidebar-wrap {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

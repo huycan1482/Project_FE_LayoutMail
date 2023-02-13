@@ -14,8 +14,8 @@
     <div class="header">
         <div class="header-logo">
             <div class="header-toggle" role="button">
-                <div class="wrap-svg"  data-click="navbar-toggle">
-                    <img src="imgs/MenuFold.svg" alt="">
+                <div class="wrap-svg" data-click="navbar-toggle" data-label="nav-left">
+                    <img src="imgs/MenuUnfold.svg" alt="" data-label="">
                 </div>
             </div>
             <a href="#" class="header-brand">
@@ -193,7 +193,7 @@
     </div> 
     <div class="content">
         <div class="sidebar">
-            <div class="sidebar-left wrap-text">
+            <div class="sidebar-left wrap-text active">
                 <div class="sidebar-box">
                     <div class="sidebar-box-title">
                         <span class="">CHUNG</span>
@@ -239,13 +239,13 @@
                                     <span class="sidebar-name wrap-text">Giải pháp của dự án áhádasadsd</span>
                                     <span class="sidebar-quantity">(3)</span>
                                 </div>
-                                <div class="wrap-svg">
+                                <div class="wrap-svg" data-change="rotate">
                                     <img class="svg" src="imgs/arrow-up.svg" alt="">
                                 </div>
                             </div>
                             <div class="option-child-list collapse show" id="collapseExample1">
                                 <ul>
-                                    <li class="options">
+                                    <li class="options option-hover">
                                         <a href="#" class="sidebar-link">
                                             <div class="wrap-svg sidebar-logo">
                                                 <img src="imgs/Logo giải pháp.svg" alt="">
@@ -257,7 +257,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="options">
+                                    <li class="options option-hover">
                                         <a href="#" class="sidebar-link">
                                             <div class="wrap-svg sidebar-logo">
                                                 <img src="imgs/Logo giải pháp.svg" alt="">
@@ -269,7 +269,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="options">
+                                    <li class="options option-hover">
                                         <a href="#" class="sidebar-link">
                                             <div class="wrap-svg sidebar-logo">
                                                 <img src="imgs/Logo giải pháp.svg" alt="">
@@ -293,13 +293,13 @@
                                     <span class="sidebar-name wrap-text">Có thể bạn quan tâm áhádasadsd</span>
                                     <span class="sidebar-quantity">(15)</span>
                                 </div>
-                                <div class="wrap-svg">
+                                <div class="wrap-svg" data-change="rotate">
                                     <img class="svg" src="imgs/arrow-up.svg" alt="">
                                 </div>
                             </div>
                             <div class="option-child-list collapse show" id="collapseExample2">
                                 <ul>
-                                    <li class="options option-active">
+                                    <li class="options option-active option-hover">
                                         <a href="#" class="sidebar-link">
                                             <div class="wrap-svg sidebar-logo">
                                                 <img src="imgs/Logo giải pháp.svg" alt="">
@@ -311,7 +311,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="options">
+                                    <li class="options option-hover">
                                         <a href="#" class="sidebar-link">
                                             <div class="wrap-svg sidebar-logo">
                                                 <img src="imgs/Logo giải pháp.svg" alt="">
@@ -323,7 +323,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="options">
+                                    <li class="options option-hover">
                                         <a href="#" class="sidebar-link">
                                             <div class="wrap-svg sidebar-logo">
                                                 <img src="imgs/Logo giải pháp.svg" alt="">
@@ -341,103 +341,109 @@
                     </ul>
                 </div>
             </div>
-            <div class="sidebar-right wrap-text">
-                <div class="sidebar-box">
-                    <ul class="sidebar-box-options">
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="sidebar-right">
+                <div class="sidebar-wrap wrap-text">
+                    <div class="sidebar-box">
+                        <ul class="sidebar-box-options">
+                            <li class="options option-hover option-active">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box">
+                        <ul class="sidebar-box-options">
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box">
+                        <ul class="sidebar-box-options">
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                            <li class="options option-hover">
+                                <a href="#" class="sidebar-link">
+                                    <div class="wrap-svg sidebar-logo">
+                                        <img class="svg" src="imgs/menu-home.svg" alt="">
+                                    </div>
+                                    <span class="sidebar-label">My Bizfly</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="sidebar-box">
-                    <ul class="sidebar-box-options">
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sidebar-box">
-                    <ul class="sidebar-box-options">
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                        <li class="options option-hover">
-                            <a href="#" class="sidebar-link">
-                                <div class="wrap-svg sidebar-logo">
-                                    <img class="svg" src="imgs/menu-home.svg" alt="">
-                                </div>
-                                <span class="sidebar-label">My Bizfly</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="slide-sidebar" role="button">
-                    <img src="imgs/slide-sidebar-right.svg" alt="">
+                
+                <div class="slide-sidebar" role="button" data-click="navbar-toggle" data-label="nav-right">
+                    <img src="imgs/side-arrow-left.svg" alt="" data-label="active">
                 </div>
             </div>
+        </div>
+        <div class="main-content">
+            
         </div>
     </div>
 

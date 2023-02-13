@@ -3,7 +3,7 @@
         width: 48px;
     }
 
-    &-left.active {
+    &-left.active, &-right.active {
         .sidebar-box-title {
             display: none;
         }
@@ -15,7 +15,7 @@
                 .wrap-svg {
                     width: 16px;
                     height: auto;
-                    margin-right: 20px;
+                    margin-right: 25px;
 
                     svg {
                         width: 16px;
@@ -39,7 +39,7 @@
                 }
 
                 .sidebar-text {
-                    max-height: 30px;
+                    max-height: 50px;
                     transition: 0.5s ease-out;
                     overflow-y: hidden;
                 }
@@ -48,5 +48,24 @@
         }
 
     }
+
+    &-right.active {
+        width: 64px;
+
+        .sidebar-box-options {
+            .sidebar-link, .sidebar-collapse {
+                padding: 12px 24px;
+            }
+        }
+
+        .sidebar-box-options {
+            .sidebar-link, .sidebar-collapse {
+                .wrap-svg {
+                    transition: margin-right .3s;
+                }
+            }
+        }
+    }
+
 
 }

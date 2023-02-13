@@ -71,7 +71,13 @@
 .content {
     height: 100vh;
     width: 100%;
-    background-color: $red-text;
+    // background-color: $red-text;
+
+    // .main-content {
+    //     margin-left: 500px;
+    //     width: 100%;
+    //     height: 500px;
+    // }
 }
 
 .wrap-text {
@@ -81,7 +87,13 @@
     white-space: nowrap;
 }
 
+.rotate-img {
+    transform: rotate(180deg);
+}
+
 .header {
+    position: fixed;
+    top: 0px;
     padding: 0 17px;
     height: 64px;
     width: 100%;
@@ -110,7 +122,7 @@
         width: calc(100%);
         .header-nav {
             .nav-options {
-                width: 232px;
+                width: 210px;
                 @include align-container();
             }
 
@@ -245,9 +257,11 @@
 }
 
 .sidebar {
+    position: fixed;
+    top: 64px;
+    left: 0;
     display: flex;
     height: 100%;
-    overflow-x: hidden;
     // background-color: #fff;
     &-left, &-right {
         transition: .5s all;
@@ -264,8 +278,16 @@
         box-shadow: inset -1px 0px 0px #F0F0F0;
         position: relative;
         .slide-sidebar {
+            width: 14px;
             position: absolute;
-
+            top: 400px;
+            right: -14px;
+            background-color: #4D7FF8;
+            z-index: 100;
+            img {
+                width: 14px;
+                height: 66px;
+            }
         }
     }
 
@@ -311,6 +333,33 @@
                     .sidebar-status {
                         font-size: $small-size;
                     }
+
+                    .option-hover {
+                        .sidebar-logo {
+                            transition: opacity .3s;
+                        }
+
+                        .sidebar-text {
+                            .sidebar-name {
+                                transition: all .3s;
+                            }
+                        }
+
+                        &:hover{
+                            .sidebar-logo {
+                                transition: all .5s;
+                                opacity: .5;
+                            }
+
+                            .sidebar-text {
+                                .sidebar-name {
+                                    color: $blue-text;
+                                    transition: all .5s;
+                                }
+                            }
+
+                        }
+                    }
                 }
             }
 
@@ -342,6 +391,7 @@
 
             .option-active {
                 background: $background-active;
+                // box-shadow: inset -3px 0px 0px $blue-text;
                 border-right: 3px solid $blue-text;
                 .sidebar-collapse-content .sidebar-name, .sidebar-collapse-content .sidebar-quantity {
                     color: $blue-text;
@@ -380,5 +430,13 @@
                 max-width: 140px;
             }
         }
+
+        [data-change="rotate"] {
+            transition: all .5s;
+        }
+    }
+
+    &-wrap {
+        width: 100%;
     }
 }
