@@ -106,9 +106,6 @@ a:hover {
 .sidebar-right.active .sidebar-box-options .sidebar-link, .sidebar-right.active .sidebar-box-options .sidebar-collapse {
   padding: 12px 24px;
 }
-.sidebar-right.active .sidebar-box-options .sidebar-link .wrap-svg, .sidebar-right.active .sidebar-box-options .sidebar-collapse .wrap-svg {
-  transition: margin-right 0.3s;
-}
 
 .wrap-svg {
   display: flex;
@@ -213,7 +210,7 @@ a:hover {
   width: 100%;
 }
 .header-navbar .header-nav .nav-options {
-  width: 210px;
+  width: 220px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -358,7 +355,7 @@ a:hover {
   box-shadow: inset -1px 0px 0px #F0F0F0;
 }
 .sidebar-right {
-  width: 210px;
+  width: 220px;
   box-shadow: inset -1px 0px 0px #F0F0F0;
   position: relative;
 }

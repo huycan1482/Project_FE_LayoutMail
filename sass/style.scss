@@ -128,7 +128,7 @@
         width: calc(100%);
         .header-nav {
             .nav-options {
-                width: 210px;
+                width: 220px;
                 @include align-container();
             }
 
@@ -280,7 +280,7 @@
     }
 
     &-right {
-        width: 210px;
+        width: 220px;
         box-shadow: inset -1px 0px 0px #F0F0F0;
         position: relative;
         .slide-sidebar {
