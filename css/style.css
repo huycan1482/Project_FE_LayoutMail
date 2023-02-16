@@ -86,7 +86,7 @@ a:hover {
   margin-bottom: 8px;
 }
 .sidebar-left.active .sidebar-box-options .sidebar-collapse-content, .sidebar-right.active .sidebar-box-options .sidebar-collapse-content {
-  margin-left: 0;
+  margin-left: unset;
 }
 .sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link, .sidebar-right.active .sidebar-box-options .options .option-child-list .sidebar-link {
   padding: 12px 15px;
@@ -94,6 +94,7 @@ a:hover {
 }
 .sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-logo img, .sidebar-right.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-logo img {
   width: 20px;
+  max-width: none;
 }
 .sidebar-left.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text, .sidebar-right.active .sidebar-box-options .options .option-child-list .sidebar-link .sidebar-text {
   max-height: 15px;
@@ -111,7 +112,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: margin 0.7s;
 }
 
 .search-input-left {
@@ -178,7 +178,7 @@ a:hover {
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 20;
   top: 0px;
   padding: 0 17px;
   height: 64px;
@@ -225,12 +225,13 @@ a:hover {
 }
 .header-navbar .header-nav .dropdown-menu-projects {
   width: 305px;
-  height: 370px;
+  max-height: 370px;
   padding: 16px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background: #FFFFFF;
   top: 5px !important;
+  z-index: 20;
 }
 .header-navbar .header-nav .dropdown-menu-projects .search-projects {
   margin-bottom: 16px;
@@ -282,12 +283,12 @@ a:hover {
   margin: 0 12px;
 }
 .header-navbar .header-options .list-option .options .wrap-svg {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 .header-navbar .header-options .list-option .options .dropdown-menu-options {
   top: 30px !important;
-  right: -10px !important;
+  left: -21px !important;
   position: relative;
   width: 240px;
   border: none;
@@ -345,6 +346,9 @@ a:hover {
   left: 0;
   display: flex;
   height: 100%;
+  width: unset !important;
+  background-color: #fff;
+  z-index: 10;
 }
 .sidebar-left, .sidebar-right {
   transition: 0.7s all;
@@ -364,7 +368,6 @@ a:hover {
   position: absolute;
   top: 400px;
   right: -14px;
-  background-color: #4D7FF8;
   z-index: 100;
 }
 .sidebar-right .slide-sidebar img {
@@ -400,15 +403,17 @@ a:hover {
   width: 24px;
   height: 24px;
 }
+.sidebar-box-options .options .option-child-list .sidebar-logo img {
+  width: 24px;
+  height: auto;
+  max-width: none;
+}
 .sidebar-box-options .options .option-child-list .sidebar-name {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.85);
 }
 .sidebar-box-options .options .option-child-list .sidebar-status {
   font-size: 12px;
-}
-.sidebar-box-options .options .option-child-list .option-hover .sidebar-logo {
-  transition: opacity 0.3s;
 }
 .sidebar-box-options .options .option-child-list .option-hover .sidebar-text .sidebar-name {
   transition: all 0.3s;
@@ -458,7 +463,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: start;
-  transition: all 0.7s;
   padding: 9px 24px;
   line-height: 22px;
   height: 40px;
@@ -473,12 +477,13 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: start;
+  transition: all 0.7s;
   margin: 0 5px 0 10px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.85);
 }
 .sidebar-collapse-content .sidebar-name {
-  transition: 0.3s all;
+  transition: all 0.7s;
   margin-right: 2px;
   display: inline-block;
   max-width: 140px;
@@ -486,8 +491,32 @@ a:hover {
 .sidebar-collapse [data-change=rotate] {
   transition: all 0.5s;
 }
+.sidebar-collapse .wrap-svg {
+  transition: all 0.7s;
+}
 .sidebar-wrap {
   width: 100%;
+}
+
+#content .overview {
+  width: calc(100% - 48px - 64px);
+  margin-left: 112px;
+  transition: all 0.7s;
+}
+#content .overview.active-nav-left {
+  width: calc(100% - 64px - 240px);
+  margin-left: 304px;
+  transition: all 0.7s;
+}
+#content .overview.active-nav-right {
+  width: calc(100% - 48px - 210px);
+  margin-left: 258px;
+  transition: all 0.7s;
+}
+#content .overview.active-nav-right.active-nav-left {
+  width: calc(100% - 240px - 210px);
+  margin-left: 450px;
+  transition: all 0.7s;
 }
 
 /*# sourceMappingURL=style.css.map */

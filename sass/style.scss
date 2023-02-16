@@ -8,13 +8,13 @@
     justify-content: $justify;
 }
 
-@mixin more-transition ($things) {
+@mixin more-transition ($things: all) {
     transition: $things .7s;
 }
 
 .wrap-svg {
     @include align-container(flex, center, center);
-    @include more-transition (margin);
+    // @include more-transition (all);
 }
 
 .search-input-left {
@@ -96,9 +96,9 @@
     transform: rotate(180deg);
 }
 
-.header {
+#wrapper > .header {
     position: fixed;
-    z-index: 1;
+    z-index: 20;
     top: 0px;
     padding: 0 17px;
     height: 64px;
@@ -106,7 +106,10 @@
     background: #FFFFFF;
     box-shadow: inset 0px -1px 0px #F0F0F0;
     @include align-container(flex, center, start);
+}
 
+.header {
+    
     &-logo {
         @include align-container(flex, center, start);
         width: 230px;
@@ -143,12 +146,13 @@
 
             .dropdown-menu-projects {
                 width: 305px;
-                height: 370px;
+                max-height: 370px;
                 padding: 16px;
                 box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
                 border-radius: 4px;
                 background: #FFFFFF;
                 top: 5px !important;
+                z-index: 20;
                 
                 .search-projects {
                     margin-bottom: 16px;
@@ -194,13 +198,14 @@
                     @include align-container(flex, center, space-between);
                     margin: 0 12px;
                     .wrap-svg {
-                        width: 16px;
-                        height: 16px;
+                        width: 24px;
+                        height: 24px;
                     }
 
                     .dropdown-menu-options {
                         top: 30px !important;
-                        right: -10px !important;
+                        // right: -10px !important;
+                        left: -21px !important;
                         position: relative;
                         width: 240px;
                         border: none;
@@ -232,9 +237,14 @@
                         .list-options .options {
                             margin: 0;
                             .option-link {
+                                @include align-container(flex, center, start);
                                 width: 100%;
                                 padding: 5px 24px;
                                 margin: 4px 0;
+                                span {
+                                    line-height: 22px;
+                                    margin-left: 10px;
+                                }
                             }
                         }
 
@@ -268,7 +278,9 @@
     left: 0;
     display: flex;
     height: 100%;
-    // background-color: #fff;
+    width: unset !important;
+    background-color: #fff;
+    z-index: 10;
     &-left, &-right {
         transition: .7s all;
         padding-top: 8px;
@@ -288,7 +300,6 @@
             position: absolute;
             top: 400px;
             right: -14px;
-            background-color: #4D7FF8;
             z-index: 100;
             img {
                 width: 14px;
@@ -329,6 +340,11 @@
                     .sidebar-logo {
                         width: 24px;
                         height: 24px;
+                        img {
+                            width: 24px;
+                            height: auto;
+                            max-width: none;
+                        }
                     }
 
                     .sidebar-name {
@@ -342,7 +358,7 @@
 
                     .option-hover {
                         .sidebar-logo {
-                            transition: opacity .3s;
+                            // transition: opacity .3s;
                         }
 
                         .sidebar-text {
@@ -416,23 +432,25 @@
 
     &-link {
         @include align-container(flex, center, start);
-        @include more-transition(all);
+        // @include more-transition(all);
         padding: 9px 24px;
         line-height: 22px;
         height: 40px;
     }
 
     &-collapse {
-        @include align-container(flex, center, space-between);
+        @include align-container(flex, center, start);
+        // @include more-transition(all);
         padding: 8px 24px;
 
         &-content {
             @include align-container(flex, center, start);
+            @include more-transition(all);
             margin: 0 5px 0 10px;
             font-size: $normal-size;
             color: $normal-text;
             .sidebar-name {
-                transition: .3s all;
+                @include more-transition(all);
                 margin-right: 2px;
                 display: inline-block;
                 max-width: 140px;
@@ -442,9 +460,45 @@
         [data-change="rotate"] {
             transition: all .5s;
         }
+
+        .wrap-svg {
+            @include more-transition(all);
+        }
     }
 
     &-wrap {
         width: 100%;
+    }
+}
+
+#content {
+    margin-top: 64px;
+
+
+    .overview {
+        width: calc(100% - 48px - 64px);
+        margin-left: calc(48px + 64px);
+        @include more-transition();
+    }
+
+    .overview.active-nav-left {
+        width: calc(100% - 64px - 240px);
+        margin-left: calc(64px + 240px);
+        @include more-transition();
+
+    }
+
+    .overview.active-nav-right {
+        width: calc(100% - 48px - 210px);
+        margin-left: calc(48px + 210px);
+        @include more-transition();
+
+    }
+
+    .overview.active-nav-right.active-nav-left {
+        width: calc(100% - 240px - 210px);
+        margin-left: calc(240px + 210px);
+        @include more-transition();
+
     }
 }
